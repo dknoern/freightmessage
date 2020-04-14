@@ -1,4 +1,47 @@
 <div class="container" *ngIf="auth.auth0Client$ | async">
-  <app-hero></app-hero>
+
+  
+  <ul class="navbar-nav d-none d-md-block">
+    <!-- Login button: show if NOT authenticated -->
+    <li class="nav-item" *ngIf="auth.loggedIn === false">
+
+
+
+  <div class="text-center hero my-5">
+    <img class="mb-3 app-logo" src="../../assets/logo.png" alt="logo" />
+    <h1 class="mb-4">FreightSignal</h1>
+
+    <p class="lead">
+      Welcome to FreightSignal, an application that helps you track your shipments across the earth and other planets in the system
+    </p>
+  </div>
+
+
+
+  </li>
+  </ul>
+  
+  <div align="center">
+
+
+  <ul class="navbar-nav d-none d-md-block">
+    <!-- Login button: show if NOT authenticated -->
+    <li class="nav-item" *ngIf="auth.loggedIn === false">
+
+    </li>
+
+    <p></p>
+
+    <li class="nav-item" *ngIf="auth.loggedIn === true">
+      <p class="lead">
+      One-time shipment tracking view: Aeris 3 Rover 2<br/>
+      <img class="mb-3 app-logo" src="../../assets/martian.png" width="800px" alt="Mark Whatney trek" />
+ </p>
+ 
+    </li>
+  </ul>
+  </div>
+
+  
   <app-home-content></app-home-content>
 </div>
